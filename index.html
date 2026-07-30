@@ -3,216 +3,361 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Abhiraj Saini | Gameplay Programmer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
 
-    font-family:Poppins,sans-serif;
-    background:#0f1117;
-    color:white;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f1117;
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+header {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, #182333 0%, #0f1117 60%);
+
+    padding: 40px;
+}
+
+.profile {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid #00d4ff;
+
+    box-shadow:
+        0 0 25px rgba(0,212,255,.35);
+
+    margin-bottom: 30px;
+
+    transition: .4s ease;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 45px rgba(0,212,255,.65);
+}
+
+h1 {
+    font-size: clamp(45px, 7vw, 70px);
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    font-size: 22px;
+
+    color: #00d4ff;
+
+    margin-top: 10px;
+
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 15px 35px;
+
+    background: #00d4ff;
+
+    color: #071016;
+
+    text-decoration: none;
+
+    border-radius: 40px;
+
+    font-weight: 600;
+
+    transition: .3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 25px rgba(0,212,255,.7);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 40px;
+}
+
+h2 {
+    font-size: 40px;
+
+    margin-bottom: 30px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    max-width: 850px;
+
+    line-height: 1.9;
+
+    color: #b8bdc7;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+
+/* Remove default link styling */
+
+.card {
+    display: block;
+
+    background: #181d2b;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,.04);
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
 
 }
 
-header{
 
-    height:100vh;
+/* Main card hover */
 
-    display:flex;
+.card:hover {
+    transform: translateY(-10px);
 
-    justify-content:center;
+    border-color:
+        rgba(0,212,255,.35);
 
-    align-items:center;
-
-    flex-direction:column;
-
-    background:linear-gradient(135deg,#0f1117,#181d2b);
-
-}
-    
-.profile{
-
-    width:180px;
-
-    height:180px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:5px solid #00d4ff;
-
-    box-shadow:0 0 30px rgba(0,212,255,.5);
-
-    margin-bottom:35px;
-
-    transition:.4s;
-
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35),
+        0 0 25px rgba(0,212,255,.18);
 }
 
-.profile:hover{
 
-    transform:scale(1.05);
+/* Project image */
 
-    box-shadow:0 0 50px rgba(0,212,255,.8);
-
-}
-    
-h1{
-
-    font-size:70px;
-
-}
-
-h2{
-
-    font-size:40px;
-
-    margin-bottom:30px;
-
-}
-
-.subtitle{
-
-    font-size:25px;
-
-    color:#00d4ff;
-
-    margin-top:15px;
-
-}
-
-.btn{
-
-    margin-top:40px;
-
-    padding:18px 40px;
-
-    background:#00d4ff;
-
-    color:black;
-
-    text-decoration:none;
-
-    border-radius:40px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-.btn:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:0 0 20px #00d4ff;
-
-}
-
-section{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:100px 40px;
-
-}
-
-.about{
-
-    line-height:1.8;
-
-    color:#bdbdbd;
-
-}
-
-.cards{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-    gap:30px;
-
-}
-    
 .project-image {
     width: 100%;
+
     height: 200px;
+
     object-fit: cover;
+
     border-radius: 12px;
-    margin-bottom: 20px;
-    transition: 0.3s;
+
+    display: block;
+
+    margin-bottom: 22px;
+
+    transition:
+        transform .45s ease;
 }
-    
-.card{
 
-    background:#181d2b;
 
-    padding:30px;
-
-    border-radius:15px;
-
-    transition:.3s;
-
-}
+/* Image zoom */
 
 .card:hover .project-image {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
-.card h3{
 
-    margin-bottom:15px;
+/* Project title */
 
+.card h3 {
+    font-size: 22px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+
+    color: white;
+
+    transition: .3s ease;
 }
 
-.card p{
 
-    color:#bfbfbf;
+/* Make title cyan on hover */
 
+.card:hover h3 {
+    color: #00d4ff;
 }
 
-.skills{
 
-    display:flex;
+/* Project description */
 
-    flex-wrap:wrap;
+.card p {
+    color: #aeb4bf;
 
-    gap:15px;
+    font-size: 14px;
 
+    line-height: 1.9;
+
+    font-weight: 400;
 }
 
-.skill{
 
-    background:#00d4ff22;
+/* =========================
+   SKILLS
+========================= */
 
-    border:1px solid #00d4ff;
+.skills {
+    display: flex;
 
-    padding:12px 22px;
+    flex-wrap: wrap;
 
-    border-radius:50px;
-
+    gap: 12px;
 }
 
-footer{
+.skill {
+    background:
+        rgba(0,212,255,.07);
 
-    padding:60px;
+    border:
+        1px solid rgba(0,212,255,.5);
 
-    text-align:center;
+    padding:
+        10px 18px;
 
-    color:#888;
+    border-radius: 50px;
+
+    color: #d7f8ff;
+
+    font-size: 14px;
+
+    transition: .3s ease;
+}
+
+.skill:hover {
+    background:
+        rgba(0,212,255,.15);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(0,212,255,.2);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 60px 30px;
+
+    text-align: center;
+
+    color: #666d78;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 30px 20px;
+    }
+
+    .profile {
+        width: 140px;
+        height: 140px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 70px 25px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .project-image {
+        height: 180px;
+    }
 
 }
 
@@ -220,136 +365,194 @@ footer{
 
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <header>
-<img src="image.png" class="profile">
-<h1>Abhiraj Saini</h1>
 
-<p class="subtitle">
+    <img src="image.png" class="profile">
 
-Gameplay Programmer • Unreal Engine 5
+    <h1>Abhiraj Saini</h1>
 
-</p>
+    <p class="subtitle">
+        Gameplay Programmer • Unreal Engine 5
+    </p>
 
-<a href="#projects" class="btn">
-
-View Projects
-
-</a>
+    <a href="#projects" class="btn">
+        View Projects
+    </a>
 
 </header>
 
+
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section>
 
-<h2>About Me</h2>
+    <h2>About Me</h2>
 
-<p class="about">
+    <p class="about">
 
-Passionate Gameplay Programmer focused on Unreal Engine 5.
+        Passionate Gameplay Programmer focused on Unreal Engine 5.
 
-I enjoy creating AI systems, gameplay mechanics, animation systems,
+        I enjoy creating AI systems, gameplay mechanics,
+        animation systems, and immersive horror game experiences.
 
-and immersive horror game experiences.
+        Currently building my own indie horror game while
+        continuously learning advanced game programming concepts.
 
-Currently building my own indie horror game while continuously learning
-
-advanced game programming concepts.
-
-</p>
+    </p>
 
 </section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section id="projects">
 
-<h2>Featured Projects</h2>
+    <h2>Featured Projects</h2>
 
-<div class="cards">
-
-<a href="enemy-ai.html" class="card">
-
-<img src="images/enemy-ai.png" class="project-image">
-
-<h3>Enemy AI System</h3>
-
-<p>
-Behavior Trees<br>
-AI Perception<br>
-Patrol<br>
-Investigation<br>
-Attack System
-</p>
-
-</a>
+    <div class="cards">
 
 
-<a href="horror.html" class="card">
+        <!-- ENEMY AI -->
 
-<img src="images/horror.png" class="project-image">
+        <a href="enemy-ai.html" class="card">
 
-<h3>Horror Game Prototype</h3>
+            <img
+                src="images/enemy-ai.png"
+                class="project-image"
+            >
 
-<p>
-First Person Horror Game<br>
-Interaction System<br>
-Inventory<br>
-Enemy AI<br>
-Puzzles
-</p>
+            <h3>
+                Enemy AI System
+            </h3>
 
-</a>
+            <p>
+                Behavior Trees<br>
+                AI Perception<br>
+                Patrol<br>
+                Investigation<br>
+                Attack System
+            </p>
+
+        </a>
 
 
-<a href="mechanics.html" class="card">
+        <!-- HORROR GAME -->
 
-<img src="images/mechanics.png" class="project-image">
+        <a href="horror.html" class="card">
 
-<h3>Gameplay Mechanics</h3>
+            <img
+                src="images/horror.png"
+                class="project-image"
+            >
 
-<p>
-Motion Warping<br>
-Animation Blueprints<br>
-Blueprint Systems<br>
-State Machines
-</p>
+            <h3>
+                Horror Game Prototype
+            </h3>
 
-</a>
+            <p>
+                First Person Horror Game<br>
+                Interaction System<br>
+                Inventory<br>
+                Enemy AI<br>
+                Puzzles
+            </p>
 
-</div>
+        </a>
+
+
+        <!-- GAMEPLAY MECHANICS -->
+
+        <a href="mechanics.html" class="card">
+
+            <img
+                src="images/mechanics.png"
+                class="project-image"
+            >
+
+            <h3>
+                Gameplay Mechanics
+            </h3>
+
+            <p>
+                Motion Warping<br>
+                Animation Blueprints<br>
+                Blueprint Systems<br>
+                State Machines
+            </p>
+
+        </a>
+
+
+    </div>
 
 </section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section>
 
-<h2>Skills</h2>
+    <h2>Skills</h2>
 
-<div class="skills">
+    <div class="skills">
 
-<div class="skill">Unreal Engine 5</div>
+        <div class="skill">
+            Unreal Engine 5
+        </div>
 
-<div class="skill">Blueprints</div>
+        <div class="skill">
+            Blueprints
+        </div>
 
-<div class="skill">C++</div>
+        <div class="skill">
+            C++
+        </div>
 
-<div class="skill">AI</div>
+        <div class="skill">
+            AI
+        </div>
 
-<div class="skill">Animation</div>
+        <div class="skill">
+            Animation
+        </div>
 
-<div class="skill">Behavior Trees</div>
+        <div class="skill">
+            Behavior Trees
+        </div>
 
-<div class="skill">Motion Warping</div>
+        <div class="skill">
+            Motion Warping
+        </div>
 
-<div class="skill">Gameplay Programming</div>
+        <div class="skill">
+            Gameplay Programming
+        </div>
 
-</div>
+    </div>
 
 </section>
 
+
 <footer>
 
-© 2026 Abhiraj Saini
+    © 2026 Abhiraj Saini
 
 </footer>
+
 
 </body>
 
