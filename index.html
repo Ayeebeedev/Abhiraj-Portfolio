@@ -38,7 +38,35 @@ header{
     background:linear-gradient(135deg,#0f1117,#181d2b);
 
 }
+    
+.profile{
 
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #00d4ff;
+
+    box-shadow:0 0 30px rgba(0,212,255,.5);
+
+    margin-bottom:35px;
+
+    transition:.4s;
+
+}
+
+.profile:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 50px rgba(0,212,255,.8);
+
+}
+    
 h1{
 
     font-size:70px;
@@ -190,7 +218,7 @@ footer{
 <body>
 
 <header>
-
+<img src="profile.jpg" class="profile">
 <h1>Abhiraj Saini</h1>
 
 <p class="subtitle">
