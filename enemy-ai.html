@@ -1,0 +1,443 @@
+<!-- =========================
+     PROJECT SHOWCASE
+========================= -->
+
+<style>
+
+.project-showcase {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    margin-top: 70px;
+
+    padding: 35px;
+
+    background: #151922;
+
+    border: 1px solid rgba(255,255,255,.05);
+
+    border-radius: 24px;
+
+    transition: .4s ease;
+
+}
+
+.project-showcase:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(0,212,255,.25);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35),
+        0 0 30px rgba(0,212,255,.08);
+
+}
+
+
+/* Alternating layout */
+
+.project-showcase.reverse {
+
+    grid-template-columns: 1fr 1.2fr;
+
+}
+
+.project-showcase.reverse .project-media {
+
+    order: 2;
+
+}
+
+.project-showcase.reverse .project-info {
+
+    order: 1;
+
+}
+
+
+/* GIF */
+
+.project-media {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #0b0d12;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+}
+
+.project-media img {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    transition: .5s ease;
+
+}
+
+.project-showcase:hover .project-media img {
+
+    transform: scale(1.03);
+
+}
+
+
+/* Project information */
+
+.project-info {
+
+    padding: 10px;
+
+}
+
+.project-number {
+
+    display: inline-block;
+
+    color: #00d4ff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+
+}
+
+.project-info h3 {
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+
+}
+
+.project-info p {
+
+    color: #aeb4bf;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Tags */
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    margin-bottom: 25px;
+
+}
+
+.project-tags span {
+
+    padding: 7px 13px;
+
+    border-radius: 50px;
+
+    background: rgba(0,212,255,.07);
+
+    border: 1px solid rgba(0,212,255,.25);
+
+    color: #bdefff;
+
+    font-size: 12px;
+
+}
+
+
+/* Button */
+
+.project-button {
+
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    background: #00d4ff;
+
+    color: #071016;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .3s ease;
+
+}
+
+.project-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(0,212,255,.5);
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .project-showcase,
+    .project-showcase.reverse {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 22px;
+
+    }
+
+    .project-showcase.reverse .project-media {
+
+        order: 1;
+
+    }
+
+    .project-showcase.reverse .project-info {
+
+        order: 2;
+
+    }
+
+    .project-info h3 {
+
+        font-size: 27px;
+
+    }
+
+}
+
+</style>
+
+
+<section id="projects">
+
+    <h2>Featured Projects</h2>
+
+
+    <!-- PROJECT 01 -->
+
+    <div class="project-showcase">
+
+        <div class="project-media">
+
+            <img
+                src="gifs/enemy-ai.gif"
+                alt="Enemy AI System"
+            >
+
+        </div>
+
+
+        <div class="project-info">
+
+            <span class="project-number">
+                01
+            </span>
+
+            <h3>
+                Enemy AI System
+            </h3>
+
+            <p>
+                A custom enemy AI system built in Unreal Engine 5
+                for my horror game prototype.
+            </p>
+
+            <p>
+                The enemy can patrol different areas, detect the player
+                using AI Perception, investigate suspicious locations,
+                chase the player and enter an attack state.
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>Unreal Engine 5</span>
+
+                <span>Behavior Trees</span>
+
+                <span>AI Perception</span>
+
+                <span>Blueprints</span>
+
+            </div>
+
+
+            <a
+                href="enemy-ai.html"
+                class="project-button"
+            >
+                View Project →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT 02 -->
+
+    <div class="project-showcase reverse">
+
+        <div class="project-media">
+
+            <img
+                src="gifs/horror.gif"
+                alt="Horror Game Prototype"
+            >
+
+        </div>
+
+
+        <div class="project-info">
+
+            <span class="project-number">
+                02
+            </span>
+
+            <h3>
+                Horror Game Prototype
+            </h3>
+
+            <p>
+                A first-person horror game prototype focused on
+                exploration, interaction and enemy encounters.
+            </p>
+
+            <p>
+                The project includes an interaction system,
+                inventory, puzzles, hiding mechanics and a custom
+                enemy AI designed around the horror experience.
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>Unreal Engine 5</span>
+
+                <span>Gameplay</span>
+
+                <span>Horror</span>
+
+                <span>Blueprints</span>
+
+            </div>
+
+
+            <a
+                href="horror.html"
+                class="project-button"
+            >
+                View Project →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT 03 -->
+
+    <div class="project-showcase">
+
+        <div class="project-media">
+
+            <img
+                src="gifs/mechanics.gif"
+                alt="Gameplay and Animation Systems"
+            >
+
+        </div>
+
+
+        <div class="project-info">
+
+            <span class="project-number">
+                03
+            </span>
+
+            <h3>
+                Gameplay & Animation Systems
+            </h3>
+
+            <p>
+                A collection of gameplay and animation systems
+                developed while experimenting with Unreal Engine 5.
+            </p>
+
+            <p>
+                Includes animation state machines, animation montages,
+                motion warping, animation blending and other
+                gameplay-focused Blueprint systems.
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>Animation</span>
+
+                <span>Motion Warping</span>
+
+                <span>Blueprints</span>
+
+                <span>State Machines</span>
+
+            </div>
+
+
+            <a
+                href="mechanics.html"
+                class="project-button"
+            >
+                View Project →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
