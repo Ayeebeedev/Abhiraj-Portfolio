@@ -1,7 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Abhiraj Saini | Gameplay Programmer</title>
@@ -32,23 +36,35 @@ body {
 ========================= */
 
 header {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     flex-direction: column;
 
     text-align: center;
 
     background:
-        radial-gradient(circle at center, #182333 0%, #0f1117 60%);
+        radial-gradient(
+            circle at center,
+            #182333 0%,
+            #0f1117 60%
+        );
 
     padding: 40px;
+
 }
 
+
 .profile {
+
     width: 180px;
+
     height: 180px;
 
     border-radius: 50%;
@@ -63,24 +79,34 @@ header {
     margin-bottom: 30px;
 
     transition: .4s ease;
+
 }
 
+
 .profile:hover {
+
     transform: scale(1.05);
 
     box-shadow:
         0 0 45px rgba(0,212,255,.65);
+
 }
 
+
 h1 {
-    font-size: clamp(45px, 7vw, 70px);
+
+    font-size:
+        clamp(45px, 7vw, 70px);
 
     font-weight: 700;
 
     letter-spacing: -2px;
+
 }
 
+
 .subtitle {
+
     font-size: 22px;
 
     color: #00d4ff;
@@ -88,9 +114,12 @@ h1 {
     margin-top: 10px;
 
     font-weight: 500;
+
 }
 
+
 .btn {
+
     display: inline-block;
 
     margin-top: 35px;
@@ -108,13 +137,17 @@ h1 {
     font-weight: 600;
 
     transition: .3s ease;
+
 }
 
+
 .btn:hover {
+
     transform: translateY(-5px);
 
     box-shadow:
         0 0 25px rgba(0,212,255,.7);
+
 }
 
 
@@ -123,19 +156,24 @@ h1 {
 ========================= */
 
 section {
+
     max-width: 1200px;
 
     margin: auto;
 
     padding: 100px 40px;
+
 }
 
+
 h2 {
+
     font-size: 40px;
 
     margin-bottom: 30px;
 
     font-weight: 600;
+
 }
 
 
@@ -144,6 +182,7 @@ h2 {
 ========================= */
 
 .about {
+
     max-width: 850px;
 
     line-height: 1.9;
@@ -151,6 +190,7 @@ h2 {
     color: #b8bdc7;
 
     font-size: 16px;
+
 }
 
 
@@ -159,18 +199,22 @@ h2 {
 ========================= */
 
 .cards {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
 
     gap: 30px;
+
 }
 
 
-/* Remove default link styling */
-
 .card {
+
     display: block;
 
     background: #181d2b;
@@ -183,7 +227,8 @@ h2 {
 
     color: white;
 
-    border: 1px solid rgba(255,255,255,.04);
+    border:
+        1px solid rgba(255,255,255,.04);
 
     overflow: hidden;
 
@@ -195,9 +240,8 @@ h2 {
 }
 
 
-/* Main card hover */
-
 .card:hover {
+
     transform: translateY(-10px);
 
     border-color:
@@ -206,12 +250,12 @@ h2 {
     box-shadow:
         0 15px 40px rgba(0,0,0,.35),
         0 0 25px rgba(0,212,255,.18);
+
 }
 
 
-/* Project image */
-
 .project-image {
+
     width: 100%;
 
     height: 200px;
@@ -226,19 +270,19 @@ h2 {
 
     transition:
         transform .45s ease;
+
 }
 
-
-/* Image zoom */
 
 .card:hover .project-image {
+
     transform: scale(1.04);
+
 }
 
 
-/* Project title */
-
 .card h3 {
+
     font-size: 22px;
 
     font-weight: 600;
@@ -248,19 +292,19 @@ h2 {
     color: white;
 
     transition: .3s ease;
+
 }
 
-
-/* Make title cyan on hover */
 
 .card:hover h3 {
+
     color: #00d4ff;
+
 }
 
 
-/* Project description */
-
 .card p {
+
     color: #aeb4bf;
 
     font-size: 14px;
@@ -268,22 +312,68 @@ h2 {
     line-height: 1.9;
 
     font-weight: 400;
+
 }
 
 
 /* =========================
-   SKILLS
+   SKILLS & EXPERTISE
 ========================= */
 
+.skill-category {
+
+    margin-bottom: 45px;
+
+}
+
+
+.skill-category h3 {
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+}
+
+
+.skill-category h3::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 5px;
+
+    height: 22px;
+
+    background: #00d4ff;
+
+    border-radius: 5px;
+
+    margin-right: 12px;
+
+    vertical-align: -3px;
+
+}
+
+
 .skills {
+
     display: flex;
 
     flex-wrap: wrap;
 
     gap: 12px;
+
 }
 
+
 .skill {
+
     background:
         rgba(0,212,255,.07);
 
@@ -300,16 +390,119 @@ h2 {
     font-size: 14px;
 
     transition: .3s ease;
+
 }
 
+
 .skill:hover {
+
     background:
         rgba(0,212,255,.15);
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 0 15px rgba(0,212,255,.2);
+
+}
+
+
+/* =========================
+   SOFTWARE
+========================= */
+
+.software-section {
+
+    margin-top: 80px;
+
+}
+
+
+.software-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(170px, 1fr)
+        );
+
+    gap: 18px;
+
+}
+
+
+.software-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background: #151922;
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 15px;
+
+    transition: .3s ease;
+
+}
+
+
+.software-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(0,212,255,.35);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.3),
+        0 0 20px rgba(0,212,255,.08);
+
+}
+
+
+.software-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+}
+
+
+.software-name {
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #e8ebf0;
+
+}
+
+
+.software-type {
+
+    font-size: 11px;
+
+    color: #747c88;
+
+    margin-top: 3px;
+
 }
 
 
@@ -318,13 +511,16 @@ h2 {
 ========================= */
 
 footer {
-    padding: 60px 30px;
+
+    padding:
+        60px 30px;
 
     text-align: center;
 
     color: #666d78;
 
     font-size: 14px;
+
 }
 
 
@@ -335,28 +531,76 @@ footer {
 @media (max-width: 600px) {
 
     header {
-        padding: 30px 20px;
+
+        padding:
+            30px 20px;
+
     }
+
 
     .profile {
+
         width: 140px;
+
         height: 140px;
+
     }
+
 
     .subtitle {
+
         font-size: 17px;
+
     }
+
 
     section {
-        padding: 70px 25px;
+
+        padding:
+            70px 25px;
+
     }
+
 
     h2 {
+
         font-size: 32px;
+
     }
 
+
     .project-image {
+
         height: 180px;
+
+    }
+
+
+    .software-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .software-card {
+
+        padding: 14px;
+
+        gap: 10px;
+
+    }
+
+
+    .software-icon {
+
+        width: 40px;
+
+        height: 40px;
+
     }
 
 }
@@ -375,15 +619,24 @@ footer {
 
 <header>
 
-    <img src="image.png" class="profile">
+    <img
+        src="image.png"
+        class="profile"
+        alt="Abhiraj Saini"
+    >
 
-    <h1>Abhiraj Saini</h1>
+    <h1>
+        Abhiraj Saini
+    </h1>
 
     <p class="subtitle">
         Gameplay Programmer • Unreal Engine 5
     </p>
 
-    <a href="#projects" class="btn">
+    <a
+        href="#projects"
+        class="btn"
+    >
         View Projects
     </a>
 
@@ -396,17 +649,22 @@ footer {
 
 <section>
 
-    <h2>About Me</h2>
+    <h2>
+        About Me
+    </h2>
 
     <p class="about">
 
-        Passionate Gameplay Programmer focused on Unreal Engine 5.
+        Passionate Gameplay Programmer focused on
+        Unreal Engine 5.
 
         I enjoy creating AI systems, gameplay mechanics,
-        animation systems, and immersive horror game experiences.
+        animation systems, and immersive horror game
+        experiences.
 
         Currently building my own indie horror game while
-        continuously learning advanced game programming concepts.
+        continuously learning advanced game programming
+        concepts.
 
     </p>
 
@@ -419,18 +677,25 @@ footer {
 
 <section id="projects">
 
-    <h2>Featured Projects</h2>
+    <h2>
+        Featured Projects
+    </h2>
+
 
     <div class="cards">
 
 
         <!-- ENEMY AI -->
 
-        <a href="enemy-ai.html" class="card">
+        <a
+            href="enemy-ai.html"
+            class="card"
+        >
 
             <img
                 src="images/enemy-ai.png"
                 class="project-image"
+                alt="Enemy AI System"
             >
 
             <h3>
@@ -438,11 +703,17 @@ footer {
             </h3>
 
             <p>
+
                 Behavior Trees<br>
+
                 AI Perception<br>
+
                 Patrol<br>
+
                 Investigation<br>
+
                 Attack System
+
             </p>
 
         </a>
@@ -450,11 +721,15 @@ footer {
 
         <!-- HORROR GAME -->
 
-        <a href="horror.html" class="card">
+        <a
+            href="horror.html"
+            class="card"
+        >
 
             <img
                 src="images/horror.png"
                 class="project-image"
+                alt="First Person Prototype"
             >
 
             <h3>
@@ -462,11 +737,17 @@ footer {
             </h3>
 
             <p>
+
                 First Person Horror Game<br>
+
                 Interaction System<br>
+
                 Inventory<br>
+
                 Enemy AI<br>
+
                 Puzzles
+
             </p>
 
         </a>
@@ -474,11 +755,15 @@ footer {
 
         <!-- GAMEPLAY MECHANICS -->
 
-        <a href="mechanics.html" class="card">
+        <a
+            href="mechanics.html"
+            class="card"
+        >
 
             <img
                 src="images/mechanics.png"
                 class="project-image"
+                alt="Gameplay Mechanics"
             >
 
             <h3>
@@ -486,10 +771,15 @@ footer {
             </h3>
 
             <p>
+
                 Motion Warping<br>
+
                 Animation Blueprints<br>
+
                 Blueprint Systems<br>
+
                 State Machines
+
             </p>
 
         </a>
@@ -501,51 +791,282 @@ footer {
 
 
 <!-- =========================
-     SKILLS
+     SKILLS & EXPERTISE
 ========================= -->
 
 <section>
 
-    <h2>Skills</h2>
+    <h2>
+        Skills & Expertise
+    </h2>
 
-    <div class="skills">
 
-        <div class="skill">
-            Unreal Engine 5
-        </div>
+    <!-- GAMEPLAY PROGRAMMING -->
 
-        <div class="skill">
-            Blueprints
-        </div>
+    <div class="skill-category">
 
-        <div class="skill">
-            C++
-        </div>
-
-        <div class="skill">
-            AI
-        </div>
-
-        <div class="skill">
-            Animation
-        </div>
-
-        <div class="skill">
-            Behavior Trees
-        </div>
-
-        <div class="skill">
-            Motion Warping
-        </div>
-
-        <div class="skill">
+        <h3>
             Gameplay Programming
+        </h3>
+
+        <div class="skills">
+
+            <div class="skill">
+                Unreal Engine 5
+            </div>
+
+            <div class="skill">
+                Blueprints
+            </div>
+
+            <div class="skill">
+                C++
+            </div>
+
+            <div class="skill">
+                Gameplay Systems
+            </div>
+
+            <div class="skill">
+                AI Systems
+            </div>
+
+            <div class="skill">
+                Behavior Trees
+            </div>
+
+            <div class="skill">
+                AI Perception
+            </div>
+
+            <div class="skill">
+                Animation Systems
+            </div>
+
+            <div class="skill">
+                Motion Warping
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ENVIRONMENT ART -->
+
+    <div class="skill-category">
+
+        <h3>
+            Environment Art
+        </h3>
+
+        <div class="skills">
+
+            <div class="skill">
+                Environment Creation
+            </div>
+
+            <div class="skill">
+                Modular Assets
+            </div>
+
+            <div class="skill">
+                Trim Sheets
+            </div>
+
+            <div class="skill">
+                Procedural Texturing
+            </div>
+
+            <div class="skill">
+                Materials
+            </div>
+
+            <div class="skill">
+                3D Asset Creation
+            </div>
+
+            <div class="skill">
+                Level Art
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SOFTWARE -->
+
+    <div class="software-section">
+
+        <h2>
+            Software
+        </h2>
+
+
+        <div class="software-grid">
+
+
+            <!-- UNREAL ENGINE -->
+
+            <div class="software-card">
+
+                <img
+                    src="images/software/unreal.png"
+                    class="software-icon"
+                    alt="Unreal Engine"
+                >
+
+                <div>
+
+                    <div class="software-name">
+                        Unreal Engine
+                    </div>
+
+                    <div class="software-type">
+                        Game Engine
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BLENDER -->
+
+            <div class="software-card">
+
+                <img
+                    src="images/software/blender.png"
+                    class="software-icon"
+                    alt="Blender"
+                >
+
+                <div>
+
+                    <div class="software-name">
+                        Blender
+                    </div>
+
+                    <div class="software-type">
+                        3D & Modeling
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBSTANCE PAINTER -->
+
+            <div class="software-card">
+
+                <img
+                    src="images/software/substance-painter.png"
+                    class="software-icon"
+                    alt="Substance Painter"
+                >
+
+                <div>
+
+                    <div class="software-name">
+                        Substance Painter
+                    </div>
+
+                    <div class="software-type">
+                        Texturing
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBSTANCE DESIGNER -->
+
+            <div class="software-card">
+
+                <img
+                    src="images/software/substance-designer.png"
+                    class="software-icon"
+                    alt="Substance Designer"
+                >
+
+                <div>
+
+                    <div class="software-name">
+                        Substance Designer
+                    </div>
+
+                    <div class="software-type">
+                        Procedural Texturing
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DAVINCI RESOLVE -->
+
+            <div class="software-card">
+
+                <img
+                    src="images/software/davinci.png"
+                    class="software-icon"
+                    alt="DaVinci Resolve"
+                >
+
+                <div>
+
+                    <div class="software-name">
+                        DaVinci Resolve
+                    </div>
+
+                    <div class="software-type">
+                        Video Editing
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FIGMA -->
+
+            <div class="software-card">
+
+                <img
+                    src="images/software/figma.png"
+                    class="software-icon"
+                    alt="Figma"
+                >
+
+                <div>
+
+                    <div class="software-name">
+                        Figma
+                    </div>
+
+                    <div class="software-type">
+                        UI & Design
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -557,3 +1078,4 @@ footer {
 </body>
 
 </html>
+```
